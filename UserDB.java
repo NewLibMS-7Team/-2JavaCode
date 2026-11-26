@@ -8,27 +8,28 @@ import java.util.*;
  */
 public class UserDB {
  
-    ArrayList<user> users = new ArrayList<user>(); 
+    ArrayList<User> users = new ArrayList<User>(); 
      /**
      * 주어진 학번을 가진 이용자를 검색한다.
      *
      * @param  userID  검색할 학번
      * @return 학번이 일치하는 이용자 객체, 없으면 null
      */
-    public user search(String userID) {
-        for (user u : users) {
+    public User search(String userID) {
+        for (User u : users) {
             if (u.userID.equals(userID)) {
                 return u;
             }
         }
         return null;
     }
+    
      /**
      * 새로운 이용자를 이용자DB에 저장한다.
      *
      * @param  user  저장할 이용자 객체
      */
-    public void save(user user) {
+    public void save(User user) {
         users.add(user);
     }
 }

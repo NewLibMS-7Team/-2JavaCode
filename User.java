@@ -5,19 +5,18 @@
  * @author (Team 7)
  * @version Iteration 1 (2026-11-03)
  */
-public class user {
+public class User {
  
     private String userID;   // 학번
     private String name;
  
-    loan loan; 
      /**
      * user class constructor
      *
      * @param  userID  이용자의 학번
      * @param  name    이용자의 이름
      */
-    public user(String userID, String name) {
+    public User(String userID, String name) {
         this.userID = userID;
         this.name = name;
     }

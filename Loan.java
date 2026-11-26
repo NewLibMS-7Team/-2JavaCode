@@ -7,13 +7,10 @@ import java.time.*;
  */
 
  
-public class loan {
+public class Loan {
  
     private LocalDate loanDate;  
-    private LocalDate returnDate;  
- 
-    user user;  
-    book book;  
+    private LocalDate dueDate;   
  
     /**
      * loan class constructor     
@@ -21,12 +18,12 @@ public class loan {
      * @param  user  책을 대출하는 이용자
      * @param  book  대출되는 책
      */
-    public loan(user user, book book) {
+    public loan(User user, Book book) {
         this.user = user;
         this.book = book;
  
         loanDate = LocalDate.now();
-        returnDate = loanDate.plusDays(14);
+        dueDate = loanDate.plusDays(14);
     }
     
      /**

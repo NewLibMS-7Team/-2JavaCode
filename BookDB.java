@@ -7,15 +7,15 @@ import java.util.*;
  */
 public class BookDB {
  
-    ArrayList<book> books = new ArrayList<book>();   
+    ArrayList<Book> books = new ArrayList<Book>();   
      /**
      * 주어진 등록번호를 가진 책을 검색한다.
      *
      * @param  bookID  검색할 책의 등록번호
      * @return  등록번호가 일치하는 책 객체, 없으면 null
      */
-    public book search(String bookID) {
-        for (book b : books) {
+    public Book search(String bookID) {
+        for (Book b : books) {
             if (b.bookID.equals(bookID)) {
                 return b;
             }
@@ -28,7 +28,7 @@ public class BookDB {
      *
      * @param  book  저장할 책 객체
      */
-    public void save(book book) {
+    public void save(Book book) {
         books.add(book);
     }
 }
